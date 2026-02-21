@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TripAdvisor - The World's Largest Travel Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== SPLASH SCREEN ===== -->
+<div class="splash-screen" id="splashScreen">
+  <div class="splash-content">
+    <div class="splash-logo">
+      <div class="logo-owl">🦉</div>
+      <span class="splash-logo-text">Trip<span>Advisor</span></span>
+    </div>
+    <div class="splash-tagline">Hey lets explore the world</div>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-owl">🦉</div>
+    <span class="logo-text">Trip<span>Advisor</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Hotels</a></li>
+    <li><a href="#">Things to Do</a></li>
+    <li><a href="#">Restaurants</a></li>
+    <li><a href="#">Flights</a></li>
+    <li><a href="#">Vacation Rentals</a></li>
+    <li><a href="#">More ▾</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-outline">Log in</button>
+    <button class="btn-green">Sign up</button>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Hotels</a>
+  <a href="#">Things to Do</a>
+  <a href="#">Restaurants</a>
+  <a href="#">Flights</a>
+  <a href="#">Vacation Rentals</a>
+  <a href="#">Log in</a>
+  <a href="#">Sign up →</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-badge">🌍 Trusted by 500M+ Travelers Worldwide</div>
+  <h1>Explore.<br>Dream. <span>Discover.</span></h1>
+  <p>Find the best hotels, restaurants, and experiences anywhere in the world — powered by millions of real traveler reviews.</p>
+
+  <div class="search-box">
+    <input type="text" placeholder="Where do you want to go? Search hotels, restaurants, things to do…" />
+    <button class="search-btn">🔍 Search</button>
+  </div>
+
+  <div class="hero-tags">
+    <div class="hero-tag">🏖️ Beaches</div>
+    <div class="hero-tag">🏔️ Mountains</div>
+    <div class="hero-tag">🏙️ City Breaks</div>
+    <div class="hero-tag">🌿 Nature</div>
+    <div class="hero-tag">🏛️ Culture</div>
+    <div class="hero-tag">🍽️ Food & Drink</div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">1B+</div>
+      <div class="stat-label">Reviews & Opinions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">8.7M</div>
+      <div class="stat-label">Hotels Listed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">7.9M</div>
+      <div class="stat-label">Restaurants</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">570M</div>
+      <div class="stat-label">Monthly Visitors</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="categories-section">
+  <div class="section-label">Browse By</div>
+  <div class="section-title">What Are You Looking For?</div>
+  <div class="categories-grid">
+    <div class="category-card reveal"><span class="category-icon">🏨</span><div class="category-name">Hotels</div><div class="category-count">5.2M+ places</div></div>
+    <div class="category-card reveal" style="animation-delay:0.1s"><span class="category-icon">🍜</span><div class="category-name">Restaurants</div><div class="category-count">7.9M+ listed</div></div>
+    <div class="category-card reveal" style="animation-delay:0.2s"><span class="category-icon">🎡</span><div class="category-name">Attractions</div><div class="category-count">4.3M+ activities</div></div>
+    <div class="category-card reveal" style="animation-delay:0.3s"><span class="category-icon">✈️</span><div class="category-name">Flights</div><div class="category-count">Compare & save</div></div>
+    <div class="category-card reveal" style="animation-delay:0.4s"><span class="category-icon">🏡</span><div class="category-name">Vacation Rentals</div><div class="category-count">2.8M+ properties</div></div>
+    <div class="category-card reveal" style="animation-delay:0.5s"><span class="category-icon">🚢</span><div class="category-name">Cruises</div><div class="category-count">480+ lines</div></div>
+    <div class="category-card reveal" style="animation-delay:0.6s"><span class="category-icon">🧳</span><div class="category-name">Travel Forums</div><div class="category-count">54M+ posts</div></div>
+    <div class="category-card reveal" style="animation-delay:0.7s"><span class="category-icon">🗺️</span><div class="category-name">Travel Guides</div><div class="category-count">Every destination</div></div>
+  </div>
+</section>
+
+<!-- ===== TOP DESTINATIONS ===== -->
+<section>
+  <div class="destinations-header">
+    <div>
+      <div class="section-label">Handpicked For You</div>
+      <div class="section-title">Top Destinations</div>
+    </div>
+    <a href="#" class="view-all">Explore all destinations →</a>
+  </div>
+
+  <div class="destinations-grid">
+    <!-- Big card -->
+    <div class="dest-card big reveal">
+      <div class="dest-bg bg-1"></div>
+      <div class="dest-emoji"></div>
+      <div class="dest-overlay"></div>
+      <div class="dest-info">
+        <div class="dest-tag">🔥 Trending</div>
+        <h3>Paris, France</h3>
+        <div class="dest-sub">1,240 Hotels · 5,800 Restaurants</div>
+      </div>
+    </div>
+    <!-- Medium cards -->
+    <div class="dest-card medium reveal" style="animation-delay:0.1s">
+      <div class="dest-bg bg-2"></div>
+      <div class="dest-emoji"></div>
+      <div class="dest-overlay"></div>
+      <div class="dest-info">
+        <div class="dest-tag">🌊 Beach</div>
+        <h3>Bali, Indonesia</h3>
+        <div class="dest-sub">4,200+ Activities</div>
+      </div>
+    </div>
+    <div class="dest-card medium reveal" style="animation-delay:0.2s">
+      <div class="dest-bg bg-3"></div>
+      <div class="dest-emoji"></div>
+      <div class="dest-overlay"></div>
+      <div class="dest-info">
+        <div class="dest-tag">💎 Luxury</div>
+        <h3>Rome, Italy</h3>
+        <div class="dest-sub">980 Hotels · 3,200 Restaurants</div>
+      </div>
+    </div>
+    <div class="dest-card medium reveal" style="animation-delay:0.3s">
+      <div class="dest-bg bg-4"></div>
+      <div class="dest-emoji"></div>
+      <div class="dest-overlay"></div>
+      <div class="dest-info">
+        <div class="dest-tag">☀️ Adventure</div>
+        <h3>Dubai, UAE</h3>
+        <div class="dest-sub">2,100+ Things to Do</div>
+      </div>
+    </div>
+    <div class="dest-card medium reveal" style="animation-delay:0.4s">
+      <div class="dest-bg bg-5"></div>
+      <div class="dest-emoji"></div>
+      <div class="dest-overlay"></div>
+      <div class="dest-info">
+        <div class="dest-tag">🏙️ City</div>
+        <h3>New York, USA</h3>
+        <div class="dest-sub">6,500+ Restaurants</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOTELS ===== -->
+<section class="hotels-section">
+  <div class="destinations-header">
+    <div>
+      <div class="section-label">Stay Somewhere Amazing</div>
+      <div class="section-title">Featured Hotels</div>
+    </div>
+    <a href="#" class="view-all">View all hotels →</a>
+  </div>
+  <div class="cards-row">
+
+    <div class="hotel-card reveal">
+      <div class="hotel-img">
+        <div class="hotel-img-bg bg-2" style="background: url('image/The Ritz-Carlton, Bali.c6.jpg') center/cover no-repeat !important;"></div>
+        <div class="hotel-img-emoji"></div>
+        <button class="hotel-save">🤍</button>
+        <div class="hotel-badge">Best Value</div>
+      </div>
+      <div class="hotel-body">
+        <h4>The Ritz-Carlton, Bali</h4>
+        <div class="hotel-location">📍 Nusa Dua, Bali</div>
+        <div class="hotel-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.9</span>
+          <span class="rating-count">(8,240 reviews)</span>
+        </div>
+        <div class="hotel-price">
+          <span class="price-from">From</span>
+          <span class="price-num">₹12,500</span>
+          <span class="price-per">/ night</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card reveal" style="animation-delay:0.15s">
+      <div class="hotel-img">
+        <div class="hotel-img-bg bg-1" style="background: url('image/le-meurice-paris.c7.jpg') center/cover no-repeat !important;"></div>
+        <div class="hotel-img-emoji"></div>
+        <button class="hotel-save">🤍</button>
+        <div class="hotel-badge">Top Rated</div>
+      </div>
+      <div class="hotel-body">
+        <h4>Le Meurice, Paris</h4>
+        <div class="hotel-location">📍 1st Arrondissement, Paris</div>
+        <div class="hotel-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.8</span>
+          <span class="rating-count">(6,100 reviews)</span>
+        </div>
+        <div class="hotel-price">
+          <span class="price-from">From</span>
+          <span class="price-num">₹42,000</span>
+          <span class="price-per">/ night</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card reveal" style="animation-delay:0.3s">
+      <div class="hotel-img">
+        <div class="hotel-img-bg bg-4" style="background: url('image/jumeirah-burj-al-arab.c8.jpg') center/cover no-repeat !important;"></div>
+        <div class="hotel-img-emoji"></div>
+        <button class="hotel-save">🤍</button>
+      </div>
+      <div class="hotel-body">
+        <h4>Burj Al Arab Jumeirah</h4>
+        <div class="hotel-location">📍 Jumeirah Beach, Dubai</div>
+        <div class="hotel-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.9</span>
+          <span class="rating-count">(12,540 reviews)</span>
+        </div>
+        <div class="hotel-price">
+          <span class="price-from">From</span>
+          <span class="price-num">₹1,40,000</span>
+          <span class="price-per">/ night</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card reveal" style="animation-delay:0.45s">
+      <div class="hotel-img">
+        <div class="hotel-img-bg bg-3" style="background: url('image/Hotel Eden, Rome.c9.jpg') center/cover no-repeat !important;"></div>
+        <div class="hotel-img-emoji"></div>
+        <button class="hotel-save">🤍</button>
+        <div class="hotel-badge">New!</div>
+      </div>
+      <div class="hotel-body">
+        <h4>Hotel Eden, Rome</h4>
+        <div class="hotel-location">📍 Via Ludovisi, Rome</div>
+        <div class="hotel-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-num">4.7</span>
+          <span class="rating-count">(3,890 reviews)</span>
+        </div>
+        <div class="hotel-price">
+          <span class="price-from">From</span>
+          <span class="price-num">₹28,000</span>
+          <span class="price-per">/ night</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== EXPERIENCES ===== -->
+<section class="experiences-section">
+  <div class="destinations-header">
+    <div>
+      <div class="section-label">Unforgettable Moments</div>
+      <div class="section-title">Trending Experiences</div>
+    </div>
+    <a href="#" class="view-all">See all experiences →</a>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card reveal">
+      <div class="exp-img">
+        <div class="exp-img-bg bg-5" style="height:100%; background: url('image/Scuba Diving in the Great Barrier Reef.c10.webp') center/cover no-repeat !important;"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;opacity:0.5"></div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-type">Water Sports</div>
+        <h4>Scuba Diving in the Great Barrier Reef</h4>
+        <div class="exp-details">
+          <div class="exp-rating">⭐ 4.9 <span style="color:#aaa">(2.1k)</span></div>
+          <div class="exp-price">₹4,200 <span>/ person</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-card reveal" style="animation-delay:0.1s">
+      <div class="exp-img">
+        <div class="exp-img-bg bg-2" style="height:100%; background: url('image/Mount Batur Sunrise Trekking, Bali.c11.webp') center/cover no-repeat !important;"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;opacity:0.5"></div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-type">Adventure</div>
+        <h4>Mount Batur Sunrise Trekking, Bali</h4>
+        <div class="exp-details">
+          <div class="exp-rating">⭐ 4.8 <span style="color:#aaa">(5.4k)</span></div>
+          <div class="exp-price">₹2,800 <span>/ person</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-card reveal" style="animation-delay:0.2s">
+      <div class="exp-img">
+        <div class="exp-img-bg bg-1" style="height:100%; background: url('image/Paris Wine & Cheese Tasting Tour.c12.webp') center/cover no-repeat !important;"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;opacity:0.5"></div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-type">Food & Wine</div>
+        <h4>Paris Wine & Cheese Tasting Tour</h4>
+        <div class="exp-details">
+          <div class="exp-rating">⭐ 4.9 <span style="color:#aaa">(3.8k)</span></div>
+          <div class="exp-price">₹5,500 <span>/ person</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-card reveal" style="animation-delay:0.3s">
+      <div class="exp-img">
+        <div class="exp-img-bg bg-4" style="height:100%; background: url('image/Desert Safari with Dune Bashing.c13.webp') center/cover no-repeat !important;"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;opacity:0.5"></div>
+      </div>
+      <div class="exp-body">
+        <div class="exp-type">Thrill Seeker</div>
+        <h4>Desert Safari with Dune Bashing</h4>
+        <div class="exp-details">
+          <div class="exp-rating">⭐ 4.7 <span style="color:#aaa">(9.2k)</span></div>
+          <div class="exp-price">₹3,100 <span>/ person</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews-section">
+  <div class="section-label" style="color:var(--green)">What Travelers Say</div>
+  <div class="section-title">Millions of Real Reviews</div>
+  <div class="section-desc">Every review is from someone who actually made the trip — honest, unbiased, and helpful.</div>
+  <div class="reviews-track">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Absolutely magical experience. The hotel staff went above and beyond to make our anniversary special. Bali truly is paradise on Earth — we're already planning our return trip!"</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">P</div>
+        <div>
+          <div class="reviewer-name">Priya Sharma</div>
+          <div class="reviewer-place">📍 Mumbai, India · 48 reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"The desert safari exceeded every expectation. Our guide was knowledgeable and funny, the BBQ dinner under the stars was phenomenal. 10/10 would recommend to everyone!"</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">J</div>
+        <div>
+          <div class="reviewer-name">James Williams</div>
+          <div class="reviewer-place">📍 London, UK · 127 reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <div class="review-text">"Paris never gets old. Le Meurice is simply stunning — the breakfasts are worth the price of admission alone. Walked everywhere, ate everything, no regrets whatsoever."</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">S</div>
+        <div>
+          <div class="reviewer-name">Sophie Laurent</div>
+          <div class="reviewer-place">📍 Lyon, France · 92 reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Rome in spring is pure magic. History around every corner, the food scene is world-class, and the locals are so warm. Stayed at Hotel Eden and it was immaculate from start to finish."</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">M</div>
+        <div>
+          <div class="reviewer-name">Marco Bellini</div>
+          <div class="reviewer-place">📍 Milan, Italy · 65 reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"The Great Barrier Reef scuba experience changed my life. Crystal clear water, incredible marine life — our instructor was the best I've ever had. Book it. No hesitations."</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">A</div>
+        <div>
+          <div class="reviewer-name">Aiden Chen</div>
+          <div class="reviewer-place">📍 Sydney, Australia · 210 reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <h2>Ready to Find Your Next Adventure?</h2>
+  <p>Join millions of travelers who plan smarter trips with TripAdvisor. Save places, compare prices, and book with confidence.</p>
+  <div class="cta-btns">
+    <button class="btn-white">Start Planning Free</button>
+    <button class="btn-transparent">Download the App</button>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="logo-owl">🦉</div>
+        <span class="logo-text">Trip<span>Advisor</span></span>
+      </div>
+      <p>The world's largest travel platform — helping 570 million travelers each month plan and book the perfect trip.</p>
+      <div class="social-links">
+        <button class="social-btn">𝕏</button>
+        <button class="social-btn">f</button>
+        <button class="social-btn">in</button>
+        <button class="social-btn">▶</button>
+        <button class="social-btn">📸</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Restaurants</a></li>
+        <li><a href="#">Things to Do</a></li>
+        <li><a href="#">Vacation Rentals</a></li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Cruises</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Business</h5>
+      <ul>
+        <li><a href="#">List Your Property</a></li>
+        <li><a href="#">Business Advantage</a></li>
+        <li><a href="#">Sponsored Placements</a></li>
+        <li><a href="#">Access TripAdvisor</a></li>
+        <li><a href="#">Advertise with Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>About</h5>
+      <ul>
+        <li><a href="#">About TripAdvisor</a></li>
+        <li><a href="#">Press / Media</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Trust & Safety</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Help Centre</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 TripAdvisor LLC. All rights reserved. | <a href="#" style="color:rgba(255,255,255,0.4)">Privacy Policy</a> · <a href="#" style="color:rgba(255,255,255,0.4)">Cookie Consent</a> · <a href="#" style="color:rgba(255,255,255,0.4)">Terms of Use</a></p>
+    <select class="footer-lang">
+      <option>🌐 English (IN)</option>
+      <option>हिन्दी</option>
+      <option>தமிழ்</option>
+      <option>Français</option>
+      <option>Deutsch</option>
+    </select>
+  </div>
+</footer>
+
+<script>
+  // Hide splash screen after 2.5 seconds
+  window.addEventListener('load', function() {
+    setTimeout(() => {
+      const splashScreen = document.getElementById('splashScreen');
+      if (splashScreen) {
+        splashScreen.style.pointerEvents = 'none';
+      }
+    }, 2500);
+  });
+
+  // Mobile menu toggle
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+
+  // Close menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('hamburger');
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 20) {
+      nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Heart save toggle
+  document.querySelectorAll('.hotel-save').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.textContent = this.textContent === '🤍' ? '❤️' : '🤍';
+      this.style.transform = 'scale(1.3)';
+      setTimeout(() => this.style.transform = 'scale(1)', 200);
+    });
+  });
+
+  // Category card stagger delay on scroll
+  document.querySelectorAll('.category-card').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.05}s`;
+  });
+</script>
+</body>
+</html>
